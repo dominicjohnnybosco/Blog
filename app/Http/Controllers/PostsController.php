@@ -20,7 +20,7 @@ class PostsController extends Controller
         $posts = Post::orderBy('created_at','desc')->get();
 
         //return index page
-        return view('posts.home')->with('posts',$posts);
+        return view('posts.index')->with('posts',$posts);
     }
 
     /**
