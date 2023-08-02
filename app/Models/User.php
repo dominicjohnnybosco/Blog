@@ -50,5 +50,8 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
-    
+    //function that defines the eloquent relation of a user having many post
+    public function posts(){
+        return $this->hasMany('App\Models\Post');
+    }
 }
