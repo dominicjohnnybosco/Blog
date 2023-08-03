@@ -86,7 +86,7 @@ class PostsController extends Controller
 
         $insert_post_to_db->body = $request->input('body');
 
-        //linking the user id in the user id with the user_id in the post table
+        //linking the user id column in the user table with the user_id column in the post table
         $insert_post_to_db->user_id = auth()->user()->id ;
 
         //insert the image name to the cover_image column in the post table
